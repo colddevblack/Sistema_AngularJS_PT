@@ -1,0 +1,27 @@
+<div class="container" style="padding-top:10px;">
+    <h2> Lista de Emails </h2> <br/>
+
+    <table style="width:100%"  class="table table-hover">
+        <thead>
+        <tr>
+            <th><h3>Credencial</h3></th>
+            <th><h3>Nome</h3></th>
+            <th><h3>Email</h3></th>
+             <th><h3>Ações</h3></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="email in emails">
+           <td>{{email.matricula}}</td>
+            <td>{{email.nome}}</td>
+            <td>{{email.endereco}}</td>
+            <td ng-show="$root.usuarioLogado.admin == true"> <button type="button" class="btn btn-danger">Excluir</button> </td>
+            <td ng-show="$root.usuarioLogado.admin == false"> <button type="button" class="btn btn-success">Cadastrar</button> </td>
+
+            <body> <img src="img/email.jpeg" /> </body>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
